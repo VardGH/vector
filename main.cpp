@@ -67,9 +67,8 @@ void test_vec()
 
 }
 
-int main() {
-
+int main() 
+{
     test::test_vec();
-
     return 0;
 }
