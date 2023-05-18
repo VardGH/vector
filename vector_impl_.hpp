@@ -8,16 +8,16 @@ Vector<T>::Vector()
     : m_arr(nullptr)
     , m_size(0)
     , m_cap(0) 
-    {
-    }
+{
+}
 
 template <typename T>
 Vector<T>::Vector(size_t size) 
     : m_arr(new T[size])
     , m_size(size)
     , m_cap(size) 
-    {
-    }
+{
+}
 
 template <typename T>
 Vector<T>::Vector(const Vector& other) 
@@ -135,7 +135,25 @@ void Vector<T>::clear()
 {
     m_size = 0;
 }
+    
+template <typename T>
+T& Vector<T>::back()
+{
+    return m_arr[m_size - 1];
+}
 
+template <typename T>
+const T& Vector<T>::back() const
+{
+    return m_arr[m_size - 1];
+}
+
+template <typename T>
+bool Vector<T>::empty() const
+{
+    return !(this->size());
+}
+    
 } // namespace container
 
 #endif // VECTOR_IMPL_HPP
