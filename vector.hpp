@@ -23,6 +23,9 @@ public:
     size_t size() const;
     T& operator[](size_t index);
     const T& operator[](size_t index) const;
+    T& back();
+    const T& back() const;
+    bool empty() const;
 
 private:
     T* m_arr;
