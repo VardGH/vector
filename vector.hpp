@@ -28,6 +28,11 @@ public:
             return *m_ptr;
         }
 
+        pointer operator->() const
+        {
+            return m_ptr;
+        }
+
         iterator& operator++()
         {
             ++m_ptr;
